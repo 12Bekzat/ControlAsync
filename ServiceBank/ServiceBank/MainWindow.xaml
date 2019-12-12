@@ -1,0 +1,27 @@
+﻿<Window x:Class="ServiceBank.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ServiceBank"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="83*"/>
+            <RowDefinition Height="272*"/>
+            <RowDefinition Height="64*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Система Банк" FontSize="30" FontWeight="Bold" Padding="300 10 0 0"  Foreground="#FFDC00DC"/>
+
+        <ListBox x:Name="users" Grid.Row="1" SelectionChanged="Select"/>
+
+
+        <StackPanel Orientation="Horizontal" Grid.Row="2">
+            <Button Content="Снять денег" Height="50" Width="200" FontSize="20" Margin="0" Click="WithDraw" Background="#FFDC00DC" Foreground="White"/>
+            <Button Content="Пополнить денег" Height="50" Width="200" FontSize="20" Margin="10 0 0 0" Click="Add" Background="#FFDC00DC"  Foreground="White"/>
+            <TextBox x:Name="summa" Text="Сумма" Margin="10 0 0 0" Foreground="#FFDC00DC" Height="50" Width="370" FontSize="20" Padding="9" GotFocus="Clear"/>
+        </StackPanel>
+    </Grid>
+</Window>
